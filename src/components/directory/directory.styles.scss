@@ -1,0 +1,6 @@
+.directory-menu {
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
