@@ -9,18 +9,18 @@ function App() {
   return (
     <div>
       <Switch>
-      <Route exact path="/" component={HomePage}  />
-      <Route exact path="/121" component={PageNotFound} />
+        <Route exact path="/" component={HomePage}  />
+        <Route exact path="/shop/hats" component={Hats} />
       </Switch>
     </div>
   );
 }
 
-function PageNotFound() {
+function Hats() {
   return (
     <div>
-      <h1>Page not found</h1>
-      <h2>404</h2>
+      <h1>Hats</h1>
+      <h2>buy styling hats</h2>
     </div>
   );
 }
