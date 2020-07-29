@@ -1,7 +1,8 @@
 import React from 'react';
 import {Switch, Route } from 'react-router-dom';
 
-import HomePage from './pages/homePage.component';
+import HomePage from './pages/HomePage/homePage.component';
+import ShopPage from './pages/Shop/shop.component';
 
 
 
@@ -10,19 +11,12 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage}  />
-        <Route exact path="/shop/hats" component={Hats} />
+        <Route exact path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
 }
 
-function Hats() {
-  return (
-    <div>
-      <h1>Hats</h1>
-      <h2>buy styling hats</h2>
-    </div>
-  );
-}
+
 
 export default App;

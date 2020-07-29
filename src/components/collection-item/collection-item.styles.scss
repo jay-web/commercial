@@ -1,0 +1,21 @@
+.collection-item {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   align-items: center;
+   
+   .item {
+       
+       height: 300px;
+       display: grid;
+       grid-template-rows: 1fr .1fr;
+       grid-template-columns: minmax(250px, max-content);
+       justify-content: stretch;
+   }
+
+   .item-detail{
+     display: flex;
+     padding: 0px 5px;
+     justify-content: space-between;
+   }
+}
+
