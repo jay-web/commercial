@@ -1,0 +1,16 @@
+    .header{
+        width: 95vw;
+        margin: 0 auto;
+        padding: 5px 2px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .navGroup{
+            align-self: end;
+            text-align: center;
+        }
+        .link{
+            padding: 10px;
+            align-self: end;
+        }
+    }
