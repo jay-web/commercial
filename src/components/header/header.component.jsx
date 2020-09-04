@@ -7,8 +7,12 @@ import './header.styles.scss';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-const Header = ({ currentUser }) => {
+
+
+const Header = ({ currentUser, cartBoxToggle }) => {
     console.log(currentUser)
     return (
         <div className="header">
@@ -33,15 +37,23 @@ const Header = ({ currentUser }) => {
                     )
 
                 }
+                <CartIcon />
                 
             </div>
+            {
+                cartBoxToggle ?  <CartDropdown /> : null 
+            }
+           
 
         </div>
     )
 }
 
 const mapStateToProps = (state) => {
-    return { currentUser : state.user.currentUser }
+    return { 
+        currentUser : state.user.currentUser,
+        cartBoxToggle : state.cartBoxToggle.hidden
+     }
 }
 
 export default connect(mapStateToProps)(Header);
