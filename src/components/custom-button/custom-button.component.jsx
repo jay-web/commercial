@@ -3,9 +3,9 @@ import './custom-button.styles.scss';
 
 
 
-const CustomButton = ({children, ...otherProps}) => {
+const CustomButton = ({children, buttonClass , ...otherProps}) => {
     return (
-        <button className="custom-button" {...otherProps}>
+        <button className={`${buttonClass} custom-button`} {...otherProps}>
             {children}
         </button>
     )

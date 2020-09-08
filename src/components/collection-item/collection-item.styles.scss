@@ -2,14 +2,33 @@
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    align-items: center;
+  
    
    .item {
        
-       height: 300px;
+      //  height: 300px;
        display: grid;
        grid-template-rows: 1fr .1fr;
        grid-template-columns: minmax(250px, max-content);
        justify-content: stretch;
+
+       &:hover{
+         opacity: 0.8;
+         cursor: pointer;
+       }
+
+       &:hover > .cartButton {
+         opacity: 1;
+         background-color: #000000;
+         color:#fff;
+       }
+   }
+   .image{
+    height:250px;
+    grid-row: 1/ 2;
+    grid-column: 1 /2 ;
+    z-index: 2000;
+    
    }
 
    .item-detail{
@@ -17,5 +36,18 @@
      padding: 0px 5px;
      justify-content: space-between;
    }
+
+
 }
 
+.cartButton{
+  grid-row: 1 / 2;
+  grid-column: 1/ 2;
+  z-index:2001;
+  margin-top: 180px;
+  opacity: 0.5;
+  
+// &:hover{
+//   opacity:1;
+// }
+}
