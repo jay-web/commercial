@@ -1,3 +1,4 @@
 export const cartBoxActionTypes = {
-    "toggle-cart-box": "toggle-cart-box"
+    TOGGLE_CART_BOX : "TOGGLE_CART_BOX",
+    ADD_ITEM : "ADD_ITEM"
 }

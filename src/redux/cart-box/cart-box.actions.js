@@ -3,7 +3,7 @@ import {cartBoxActionTypes } from "./cart-box.actionTypes";
 
 const cartBoxToggle = () => {
     return {
-        type : cartBoxActionTypes["toggle-cart-box"]
+        type : cartBoxActionTypes["TOGGLE_CART_BOX"]
     }
 }
 
