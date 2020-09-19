@@ -14,6 +14,6 @@ export const addItemToCart = (cartItems, newItemToAdd) => {
     
     }
    
-    // * Else 
+    // * Else add the new item in cart
     return [...cartItems, {...newItemToAdd, quantity : 1}]
 }
