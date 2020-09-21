@@ -52,7 +52,7 @@ const Header = ({ currentUser, cartBoxToggle }) => {
 const mapStateToProps = (state) => {
     return { 
         currentUser : state.user.currentUser,
-        cartBoxToggle : state.cartBoxToggle.hidden
+        cartBoxToggle : state.cart.hidden
      }
 }
 
