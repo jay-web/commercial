@@ -24,3 +24,14 @@ export const selectCartItemsCount = createSelector(
         }, 0)
     }
 )
+
+// * If required total amount of items in cart
+
+export const selectTotal = createSelector(
+    [selectCartItem],
+    (cartItems) => {
+        return cartItems.reduce((accumulatorQuantity, item) => {
+             return accumulatorQuantity + item.quantity * item.price
+        }, 0)
+    }
+)

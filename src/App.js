@@ -9,6 +9,7 @@ import './App.css';
 import HomePage from './pages/HomePage/homePage.component';
 import ShopPage from './pages/Shop/shop.component';
 import AuthPage from './pages/Auth/auth.component';
+import CheckoutPage from './pages/Checkout/checkout.component';
 import Header from './components/header/header.component';
 
 
@@ -65,6 +66,7 @@ class App extends React.Component {
              exact 
              path="/signin" 
              render={() => this.props.currentUser ? (<Redirect to="/" />) : (<AuthPage /> )} />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );
