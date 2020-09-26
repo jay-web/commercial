@@ -2,7 +2,7 @@ import React from "react";
 import CustomButton from "../custom-button/custom-button.component";
 
 import { connect } from "react-redux";
-import cartItems from "../../redux/cart-box/cart-item.actions";
+import { cartItems } from "../../redux/cart-box/cart-item.actions";
 
 import "./collection-item.styles.scss";
 
