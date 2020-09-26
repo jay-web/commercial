@@ -2,7 +2,7 @@ import React from "react";
 import CustomButton from "../custom-button/custom-button.component";
 
 import { connect } from "react-redux";
-import { cartItems } from "../../redux/cart-box/cart-item.actions";
+import { addCartItems } from "../../redux/cart-box/cart-item.actions";
 
 import "./collection-item.styles.scss";
 
@@ -27,4 +27,4 @@ const CollectionItem = ({ id, item, cartItems }) => {
   );
 };
  
-export default connect(null, {cartItems: cartItems } )(CollectionItem);
+export default connect(null, {cartItems: addCartItems } )(CollectionItem);
