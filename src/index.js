@@ -8,16 +8,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import store from "../src/redux/store";
+import {store , persistor} from "../src/redux/store";
 
+import { PersistGate } from "redux-persist/integration/react";
 
 
 ReactDOM.render(
   <Provider store={store}>
       <React.StrictMode>
-        <BrowserRouter >
-          <App />
-        </BrowserRouter >
+          <BrowserRouter >
+            <PersistGate persistor={persistor}>
+              <App />
+            </PersistGate>
+          </BrowserRouter >
       </React.StrictMode>
   </Provider>,
 
