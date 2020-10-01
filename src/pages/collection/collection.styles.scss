@@ -1,0 +1,15 @@
+.collection-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+    grid-row-gap: 2rem;
+
+    .inItem{
+        box-shadow: 5px 5px 2px rgba(0, 0, 0 , 0.1);
+    }
+  }
+  
+  h1{
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+  }

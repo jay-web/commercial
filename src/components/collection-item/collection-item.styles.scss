@@ -2,15 +2,16 @@
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    align-items: center;
-  
+   
    
    .item {
-       
+       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
       //  height: 300px;
        display: grid;
        grid-template-rows: 1fr .1fr;
        grid-template-columns: minmax(250px, max-content);
        justify-content: stretch;
+       transition: 1s;
 
        &:hover{
          opacity: 0.8;
@@ -46,6 +47,7 @@
   z-index:2001;
   margin-top: 180px;
   opacity: 0.5;
+  transition: 1s;
   
 // &:hover{
 //   opacity:1;
