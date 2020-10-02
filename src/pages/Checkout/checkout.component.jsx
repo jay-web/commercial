@@ -5,6 +5,7 @@ import {connect } from "react-redux";
 import CheckoutItem from "../../components/checkout-items/items.component";
 
 import { selectTotal, selectCartItem } from "../../redux/cart-box/cart-selector";
+import StripeCheckoutButton from "../../components/stripe/stripe-button.component";
 
 class CheckoutPage extends React.Component {
 
@@ -36,8 +37,14 @@ class CheckoutPage extends React.Component {
                 }
 
                 <div className="total">
-                    {`Total : ${this.props.total}`}
+                    {`Total : $${this.props.total}`}
                 </div>
+                <div className="test-warning">
+                    *Please use the following test credit card detail for payments
+                    <br />
+                    4242-4242-4242-4242 Exp : 01/21 - CVV : 123
+                </div>
+                <StripeCheckoutButton price={this.props.total} />
             </div>
         )
     }
