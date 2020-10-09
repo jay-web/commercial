@@ -1,20 +1,20 @@
-    .header{
-        width: 95vw;
-        margin: 0 auto;
-        padding: 5px 2px;
-        display: grid;
-        grid-template-columns: 1fr .5fr;
+    // .header{
+    //     // width: 95vw;
+    //     // margin: 0 auto;
+    //     // padding: 5px 2px;
+    //     // display: grid;
+    //     // grid-template-columns: 1fr .5fr;
 
-        .navGroup{
+    //     .navGroup{
             
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-            align-self: end;
-            // text-align: center;
-        }
-        .link{
-            padding: 10px;
-            // align-self: end;
-        }
-    }
+    //         // display: grid;
+    //         // grid-template-columns: repeat(4, 1fr);
+    //         // justify-items: center;
+    //         // align-self: end;
+    //         // text-align: center;
+    //     }
+    //     .link{
+    //         padding: 10px;
+    //         // align-self: end;
+    //     }
+    // }
