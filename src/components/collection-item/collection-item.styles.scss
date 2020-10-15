@@ -12,10 +12,12 @@
        grid-template-columns: minmax(250px, max-content);
        justify-content: stretch;
        transition: 1s;
+       border-radius: 5px;
 
        &:hover{
-         opacity: 0.8;
+        //  opacity: 0.8;
          cursor: pointer;
+         transform: scale(1.1,1.1);
        }
 
        &:hover > .cartButton {

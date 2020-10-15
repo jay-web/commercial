@@ -41,6 +41,37 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 }
 
+export const convertCollectionSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName : encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    }
+  });
+
+  return transformedCollection.reduce((accumulator, collection) => {
+      accumulator[collection.title.toLowerCase()] = collection;
+      return accumulator;
+  }, {})
+}
+
+// * To add bulk data to firestore, run only single time
+// export const addCollectionAndDocuments = async (collectionKey, objectToadd) => {
+//   const collectionRef = firestore.collection(collectionKey);
+//   const batch = firestore.batch();
+
+//   objectToadd.forEach(obj => {
+//     const newDocRef = collectionRef.doc();
+//     batch.set(newDocRef, obj);
+//   });
+
+//   return await batch.commit();
+// }
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 

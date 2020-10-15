@@ -49,6 +49,8 @@ class App extends React.Component {
         // if userAuth return null
         this.props.setCurrentUser(userAuth);
       }
+      // const collection = Object.values(this.props.collection);
+      // addCollectionAndDocuments('collection', collection.map(({title, items}) => ({title, items})));
     });
   }
 
@@ -76,7 +78,10 @@ class App extends React.Component {
 
 // * To pass the current user value from redux store to app
 const mapStateToProps = (state) => {
-  return {currentUser : state.user.currentUser}
+  return {
+    currentUser : state.user.currentUser
+    // collection: state.shop.collection
+  }
 }
 
 

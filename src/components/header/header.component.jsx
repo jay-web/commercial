@@ -18,6 +18,7 @@ const Header = ({ currentUser, cartBoxToggle }) => {
         <div className="header">
             <Link className="logo" to="/">
                 <Logo />
+                <h2>Fashion Look</h2>
             </Link>
             <div className="navGroup">
                 <Link to="/shop" className="link">
