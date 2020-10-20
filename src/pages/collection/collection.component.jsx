@@ -30,7 +30,7 @@ const CollectionPage = (props) => {
 
 const mapStateToProps = (state, ownProps) => {
   let reqCollection = state.shop.collection[ownProps.match.params.collectionId];
-  return { collection: reqCollection };
+  return { collection: reqCollection ? reqCollection : null};
 };
 
 export default connect(mapStateToProps)(CollectionPage);
