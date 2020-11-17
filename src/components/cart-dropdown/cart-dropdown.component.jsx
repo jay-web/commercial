@@ -10,6 +10,7 @@ import cartBoxToggle from "../../redux/cart-box/cart-box.actions";
 
 const CartDropdown = (props) => {
     console.log(props)
+    const showCheckout = props.cartItems.length === 0 ? "hide" : "";
     return (
         <div className="cart-dropdown">
            { props.cartItems.length ? <div className="cart-items" >
@@ -22,7 +23,7 @@ const CartDropdown = (props) => {
                     props.history.push("/checkout");
                     props.cartBoxToggle();
                 }
-                }> Go To Checkout </CustomButton>
+                } buttonClass={showCheckout}> Go To Checkout </CustomButton>
         </div>
     )
 }

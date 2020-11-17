@@ -8,9 +8,10 @@ import { selectTotal, selectCartItem } from "../../redux/cart-box/cart-selector"
 import StripeCheckoutButton from "../../components/stripe/stripe-button.component";
 
 class CheckoutPage extends React.Component {
-
+    
 
     render(){
+        const showpayButton = this.props.total ? true : false;
         return (
             <div className="checkout-page">
                 <div className="checkout-header">
@@ -39,12 +40,13 @@ class CheckoutPage extends React.Component {
                 <div className="total">
                     {`Total : $${this.props.total}`}
                 </div>
+               
                 <div className="test-warning">
                     *Please use the following test credit card detail for payments
                     <br />
                     4242-4242-4242-4242 Exp : 01/21 - CVV : 123
                 </div>
-                <StripeCheckoutButton price={this.props.total} />
+                {showpayButton ? <StripeCheckoutButton price={this.props.total} /> : null}
             </div>
         )
     }
